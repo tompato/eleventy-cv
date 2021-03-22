@@ -8,7 +8,7 @@ Feel free to use and add your own information.
 3. `npm run serve`
 
 ## How to use
-That will get you up and running with Eleventy's built in web server. Then just visit http://localhost:8080 and make any changes you want and it will refresh the server.
+That will get you up and running with Eleventy's built in web server. Then just visit http://localhost:8080 and make any changes you want and it will refresh the server. You can view an example [here](https://cv.tombennett.me.uk) where I've used it on my own site.
 
 ### Styles
 To update the styles, change the files in the `src/scss` folder and the watcher will recompile the CSS files into `src/_includes/css` which will then be passed through by Eleventy to the `build` folder.
