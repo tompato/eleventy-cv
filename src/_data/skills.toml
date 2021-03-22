@@ -1,0 +1,7 @@
+[[sections]]
+title = "Some catchy title goes here..."
+items = ["Lorem ipsum dolor", "lorem ipsum", "lorem ipsum dolor", "lorem ipsum dolor sit amet", "lorem", "lorem ipsum", "lorem ipsum dolor", "lorem", "dolor"]
+
+[[sections]]
+title = "Another catchy title goes here..."
+items = ["ACRONYM", "ACRONYM", "Language", "ACRONYM", "Tech", "Language", "Language", "Tech", "ACRONYM", "ACRONYM", "ETC", "ETC", "ETC", "Eleventy"]

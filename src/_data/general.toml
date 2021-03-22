@@ -1,0 +1,23 @@
+firstname = "Name"
+surname = "Surname"
+role = "Job Role"
+strapline = """
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua."""
+interests = ["Interest", "Hobby", "Interest", "Hobby", "Interest", "Hobby", "Interest", "Hobby", "Interest", "Hobby"]
+[[contact]]
+    name = "email"
+    content = "someone@example.com"
+    url = "mailto:someone@example.com"
+[[contact]]
+    name = "phone"
+    content = "+440000111222"
+    url = "tel:+440000111222"
+[[social]]
+    name = "Github"
+    url = "https://github.com/username"
+    img = "img/github.svg"
+[[social]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/username/"
+    img = "img/linkedin.svg"

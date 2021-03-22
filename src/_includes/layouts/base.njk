@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="author" content="{{ name }}">
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preload" as="style" href="/css/style.css">
+    <link rel="preload" as="style" href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap'>
+    <link rel="preload" as="script" href="/js/main.js">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap'>
+  </head>
+  <body>
+    <button aria-label="Theme toggle"><img src="/img/moon.svg" alt="Theme toggle"></button>
+    <div class="container">
+      {{ content|safe }}
+      <footer>
+        <p>References available upon request.</p>
+        <p>Developed by <a target="_blank" rel="noopener" href="https://tombennett.me.uk">Tom Bennett</a>, source code on <a target="_blank" rel="noopener" href="https://github.com/tompato/eleventy-cv">Github</a>.</p>
+        <p>Built using <a target="_blank" rel="noopener" href="https://www.11ty.dev/">11ty</a>.</p>
+      </footer>
+    </div>
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

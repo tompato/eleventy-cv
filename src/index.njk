@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+name: "Name Surname"
+title: "Name Surname's CV"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+---
+<header>
+    <div>
+        <h1>{{ general.firstname }}<span>{{ general.surname }}</span></h1>
+        <h2>{{ general.role }}</h2>
+        <h3>{{ general.strapline }}</h3>
+    </div>
+    <div>
+        <ul>
+            {% for item in general.contact %}
+            <li><a href="{{ item.url }}">{{ item.content }}</a></li>
+            {% endfor %}
+        </ul>
+        <ul class="social">
+            {% for item in general.social %}
+            <li>
+                <a target="_blank" rel="noopener" href="{{ item.url }}">
+                    <img data-src="{{ item.img }}" src="{{ item.img }}" alt="{{ item.name }}" width="64" height="64"/>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="col">
+        <section>
+            <h2>Experience</h2>
+            {% for item in experience.jobs %}
+            <article>
+                <h3>{{ item.role }}</h3>
+                <h4>{{ item.company }}<time>{{ item.start }} - {{ item.end }}</time></h4>
+                <p>{{ item.description }}</p>
+            </article>
+            {% endfor %}
+        </section>
+    </div>
+    <div class="col">
+        <section>
+            <h2>Skills</h2>
+            {% for section in skills.sections %}
+            <article>
+                <h3>{{ section.title }}</h3>
+                <p>{% for item in section.items %}{{ item }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+            </article>
+            {% endfor %}
+        </section>
+        <section>
+            <h2>Education</h2>
+            {% for school in education.schools %}
+            <article>
+                <p>{{ school.name }}</p>
+                <h3>{{ school.award }}</h3>
+                <p>{{ school.years }}</p>
+            </article>
+            {% endfor %}
+        </section>
+        <section>
+            <h2>Interests</h2>
+            <p>{% for interest in general.interests %}{{ interest }}{% if not loop.last %}, {% endif %}{% endfor %}
+        </section>
+    </div>
+</main>
