@@ -192,7 +192,7 @@ main {
 }
 /* Footer */
 footer { 
-    padding: 5rem 0;
+    margin: 5rem 0;
     p {
         font-size: 1.4rem;
         color: var(--font-color-2); 
@@ -246,12 +246,8 @@ footer {
         flex-direction: row; 
         .col { 
             width: 40%;
-            &:first-of-type { 
-                order: 2;
-                text-align: right; 
-            }
-            &:last-of-type { 
-                order: 1;
+            &:last-of-type {
+                text-align: right;
                 section {
                     &:first-of-type {
                         h2 {
@@ -260,6 +256,99 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+/* Print styles */
+@media print {
+    a {
+        text-decoration: none !important;
+    }
+    button {
+        display: none;
+    }
+    .container {
+        max-width: none;
+        padding: 3rem;
+    }
+    header {
+        margin: 0 0 3rem 0;
+        flex-direction: column;
+        h1 {
+            font-size: 4.2rem;
+        }
+        h2 {
+            padding: 0;
+            margin: 0 0 2rem 0;
+            font-size: 3rem;
+            background: none;
+            color: var(--font-color);
+        }
+        h3 {
+            font-size: 2.4rem;
+        }
+        div {
+            width: 100%;
+            &:last-of-type {
+                justify-content: flex-start;
+                text-align: left;
+                margin-top: 2rem;
+            }
+        }
+        ul {
+            li {
+                font-size: 1.8rem;
+            }
+            &:last-of-type {
+                flex-direction: column;
+                margin: 1rem 0 0 0;
+                li {
+                    font-size: 1.4rem;
+                    margin: 0;
+                    a {
+                        img {
+                            display: none;
+                        }
+                        &[href]:after {
+                            content: attr(href);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main {
+        flex-direction: column;
+        h2 {
+            margin: 3rem 0 2rem 0;
+        }
+        .col {
+            width: 100%;
+            section {
+                h2 {
+                    font-size: 2.4rem;
+                }
+            }
+            article {
+                margin: 0 0 3rem 0;
+            }
+            &:first-of-type {
+                text-align: left;
+            }
+            &:last-of-type {
+                text-align: left;
+                h3 {
+                    margin-top: 3rem; 
+                }
+            }
+        }
+    }
+    footer {
+        margin: 3rem 0 0 0;
+        text-align: left;
+        font-style: italic;
+        p:not(:first-child) {
+            display: none;
         }
     }
 }
